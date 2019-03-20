@@ -58,7 +58,9 @@ class LoginViewController: UIViewController {
                     a.removeObject(forKey: "username")
                     a.removeObject(forKey: "userPass")
                 }
-                
+                let c = UIStoryboard(name: "Main", bundle: nil)
+                let b = c.instantiateViewController(withIdentifier: "studententry") as! StudentEntryViewController
+                self.navigationController?.pushViewController(b, animated: true)
             }
             else
             {
