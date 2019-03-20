@@ -9,24 +9,73 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+   let a = UserDefaults.standard
     
+
     @IBOutlet weak var txtUserName: UITextField!
     
     @IBOutlet weak var lblInvalidUserName: UILabel!
     
+   
     @IBOutlet weak var txtPassword: UITextField!
     
-    @IBOutlet weak var lblIvalidPassword: UILabel!
+    @IBOutlet weak var lblInvalidPassword: UILabel!
     
-    @IBOutlet weak var RememberMeSwicth: UISwitch!
+    @IBOutlet weak var lblloginsuccess: UILabel!
+    
+    @IBOutlet weak var RememberMeswicth: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let username = a.string(forKey: "userID"){
+            txtUserName.text = username
+            if let password = a.string(forKey: "userPass"){
+                txtPassword.text = password
+                RememberMeswicth.isOn = true
+            }
+        }else{
+            RememberMeswicth.isOn = false
+        }
     }
 
-    @IBAction func btnLogin(_ sender: UIButton) {
-    }
     
+
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+    
+    
+        lblInvalidUserName.text = ""
+        lblInvalidPassword.text = ""
+        lblloginsuccess.text = ""
+        if txtUserName.text == "admin"{
+            if txtPassword.text == "admin@123"{
+                lblloginsuccess.text = "Login Successful"
+                
+                if RememberMeswicth.isOn{
+                    a.set(txtUserName.text, forKey: "username")
+                    a.set(txtPassword.text, forKey: "userPass")
+                }else{
+                    a.removeObject(forKey: "username")
+                    a.removeObject(forKey: "userPass")
+                }
+                
+            }
+            else
+            {
+                lblInvalidPassword.text="Invalid Password"
+            }
+        }
+        else
+        {
+            lblInvalidUserName.text="Invalid Usernmae"
+        }
+    }
 }
+
+
+
+
+
+    
+
 
