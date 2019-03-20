@@ -9,12 +9,24 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var txtUserName: UITextField!
+    
+    @IBOutlet weak var lblInvalidUserName: UILabel!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    @IBOutlet weak var lblIvalidPassword: UILabel!
+    
+    @IBOutlet weak var RememberMeSwicth: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func btnLogin(_ sender: UIButton) {
+    }
+    
 }
 
