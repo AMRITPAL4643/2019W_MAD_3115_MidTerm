@@ -32,6 +32,7 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate,UIPicker
     @IBOutlet weak var txtmarks4: UITextField!
     
     @IBOutlet weak var txtmarks5: UITextField!
+    var e = [Float]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,9 +40,16 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate,UIPicker
     }
     
     @IBAction func btncalculate(_ sender: UIButton) {
+        e.append(Float(txtmarks1.text!)!)
+        e.append(Float(txtmarks2.text!)!)
+        e.append(Float(txtmarks3.text!)!)
+        e.append(Float(txtmarks4.text!)!)
+        e.append(Float(txtmarks5.text!)!)
+        let s1 = Student(sid:txtstudent.text!,sname:txtSTUDENTNAME.text!,gen:gender!,bdate:date1,marks:e)
     }
     
     @IBAction func segment(_ sender: UISegmentedControl) {
+        gender=String(sender.selectedSegmentIndex)
     }
     @IBAction func datepicker(_ sender: UIDatePicker) {
         
@@ -72,7 +80,7 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate,UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView==course
         {
-            course=self.course?[course.selectedRow(inComponent: 1)]!
+            //course=self.course[course.selectedRow(inComponent: 1)]
         }
     }
 }

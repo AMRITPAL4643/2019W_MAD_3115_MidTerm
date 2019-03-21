@@ -113,11 +113,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7nX-DE-hTi">
-                                <rect key="frame" x="110" y="211" width="121" height="28"/>
+                                <rect key="frame" x="115" y="211" width="111" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="male"/>
+                                    <segment title="female"/>
                                 </segments>
                                 <connections>
                                     <action selector="segment:" destination="aUE-wb-cPV" eventType="valueChanged" id="ykJ-XN-oiY"/>
