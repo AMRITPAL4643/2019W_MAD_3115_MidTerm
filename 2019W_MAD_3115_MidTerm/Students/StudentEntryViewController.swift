@@ -21,25 +21,26 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate,UIPicker
     
     @IBOutlet weak var txtstudenta: UITextField!
      var s = ["a", "b", "c", "d"]
-    @IBOutlet weak var studentid: UITextField!
     
-    @IBOutlet weak var studentname: UITextField!
+    @IBOutlet weak var txtgender: UILabel!
+    @IBOutlet weak var txtmarks1: UITextField!
     
-    @IBOutlet weak var studentgender: UITextField!
+    @IBOutlet weak var txtmarks2: UITextField!
     
+    @IBOutlet weak var txtmarks3: UITextField!
     
-    @IBOutlet weak var studentemail: UITextField!
+    @IBOutlet weak var txtmarks4: UITextField!
     
-    @IBOutlet weak var studentbirthdate: UITextField!
-    
-    
+    @IBOutlet weak var txtmarks5: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btncalculate(_ sender: UIButton) {
+    }
+    
     @IBAction func segment(_ sender: UISegmentedControl) {
     }
     @IBAction func datepicker(_ sender: UIDatePicker) {
