@@ -9,10 +9,35 @@
 import UIKit
 
 class StudentResultViewController: UIViewController {
+    
+    @IBOutlet weak var sid: UILabel!
+    
+    @IBOutlet weak var sname: UILabel!
+    
+    @IBOutlet weak var gender: UILabel!
+    
+    @IBOutlet weak var marks1: UILabel!
+    
+    @IBOutlet weak var marks2: UILabel!
+    
+    @IBOutlet weak var marks3: UILabel!
+    
+    @IBOutlet weak var marks4: UILabel!
+    
+    @IBOutlet weak var marks5: UILabel!
+    
+    @IBOutlet weak var percentage: UILabel!
+    var bdate1:String?
+    var s:String?
+    var marks1 = [Float]()
+    var email:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let d = s
+        {
+            print(d)
+        }
         // Do any additional setup after loading the view.
     }
     

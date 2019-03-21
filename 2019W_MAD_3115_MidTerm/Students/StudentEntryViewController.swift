@@ -46,6 +46,9 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate,UIPicker
         e.append(Float(txtmarks4.text!)!)
         e.append(Float(txtmarks5.text!)!)
         let s1 = Student(sid:txtstudent.text!,sname:txtSTUDENTNAME.text!,gen:gender!,bdate:date1,marks:e)
+        let c = UIStoryboard(name: "Main", bundle: nil)
+        let b = c.instantiateViewController(withIdentifier: "entry") as! StudentResultViewController
+        self.navigationController?.pushViewController(b, animated: true)
     }
     
     @IBAction func segment(_ sender: UISegmentedControl) {
